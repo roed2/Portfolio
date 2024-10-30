@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="assets\roedprofile.jpg" alt="Profile Picture">
+                <h2>John Roed L. Retuya</h2>
+            </div>
+            <!-- roedskrrt-->
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" class="nav-link" onclick="showSection('about')">About Me</a></li>
+                <li><a href="#projects" class="nav-link" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#skills" class="nav-link" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <section id="home" class="content-section">
+                <h1>Welcome!</h1>
+            </section>
+
+            <section id="about" class="content-section" style="display: none;">
+                <div>
+                    <h1>About Me</h1>
+                <p>Hi! I'm John Roed L. Retuya, a Computer Engineering graduate who is aspiring to 
+                    be a Software Developer. I am experienced with projects related to 
+                    embedded systems like an arduino and raspberry pi which requires both programming and
+                     electronics knowledge.
+                </div>
+            </section>
+            <section id="projects" class="content-section" style="display: none;">
+                <h1>Projects</h1>
+                <div class="projects-container">
+                    <button class="nav-button prev-button" onclick="prevProject()">&#9664; Previous</button>
+            
+                    <div class="project-card-wrapper">
+                        <!-- Project 1 -->
+                        <div class="project-card active">
+                            <h2>Reverse Vending Machine</h2>
+                            <div class="project-description">
+                                <p>This project utilizes YOLOv8 model by Ultralytics trained to detect only plastic bottles and cans inserted in the machine which provides internet connectivity in exchange.</p>
+                            </div>
+                            <div class="project-tools">
+                                <p>Microcontrollers: Raspberry Pi 5, Arduino, and ESP8266</p>
+                                <p>Softwares: Juanfi, Python, Ultralytics, Arduino, Google Colab, and Roboflow.</p>
+                            </div>
+                            <p><a href="https://github.com/roed2/Reverse-Vending-Machine">Github Repository</a></p>
+                            <div class="project-pic">
+                                <img src="assets\beautiful-portfolio-website-4-1068x581.jpg" alt="Reverse Vending Machine Image">
+                            </div>
+                        </div>
+            
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <h2>Chicken Broiler Monitoring System</h2>
+                            <div class="project-description">
+                                <p>This project utilizes Internet of Things libraries like ThingSpeak to monitor broilers' body temperature, weight, and ammonia levels. The project also automatically feeds the chickens based on time. The temperature is being controlled by a fan and lightbulb.</p>
+                            </div>
+                            <div class="project-tools">
+                                <p>Microcontrollers: Raspberry Pi and Arduino</p>
+                                <p>Softwares: ThingSpeak, Arduino, Python.</p>
+                            </div>
+                            <p>The program is lost</p>
+                            <div class="project-pic">
+                                <img src="assets\beautiful-portfolio-website-4-1068x581.jpg" alt="Chicken Broiler Monitoring System Image">
+                            </div>
+                        </div>
+            
+                        <!-- Project 3 -->
+                        <div class="project-card">
+                            <h2>My Portfolio</h2>
+                            <div class="project-description">
+                                <p>I created this porfolio to show my skills and to show my understanding about the basics of programming. 
+                                    I still have a long way to go but a progress is a progress even 
+                                    if it is a little.
+                                </p>
+                            </div>
+                            <div class="project-tools">
+                                <p>Software: HTML, CSS and JavaScript</p>
+                            </div>
+                            <div class="project-pic">
+                                <img src="assets\beautiful-portfolio-website-4-1068x581.jpg" alt="Project 3 Image">
+                            </div>
+                        </div>
+            
+                        <!-- Project 4 -->
+                        <div class="project-card">
+                            <h2>Project 4</h2>
+                            <div class="project-description">
+                                <p>Integer luctus leo eu nunc vestibulum, nec aliquam metus aliquam. Proin pharetra.</p>
+                            </div>
+                            <div class="project-tools">
+                                <p>Microcontrollers: Microcontroller A, Microcontroller B</p>
+                                <p>Softwares: Software A, Software B, Software C.</p>
+                            </div>
+                            <div class="project-pic">
+                                <img src="assets\beautiful-portfolio-website-4-1068x581.jpg" alt="Project 4 Image">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <button class="nav-button next-button" onclick="nextProject()">Next &#9654;</button>
+                </div>
+            </section>
+            
+            
+            
+            <section id="skills" class="content-section" style="display: none;">
+                <h1>Skills</h1>
+                <div class="skills-container">
+                    <button class="nav-button prev-button" onclick="prevField()">&#9664; Previous</button>
+            
+                    <div class="field-card-wrapper">
+                        <!-- Hardware Field -->
+                        <div class="field-card active">
+                            <h2>Hardware</h2>
+                            <ul>
+                                <li>Microcontrollers: Arduino, Raspberry pi, NodeMcu</li>
+                                <li>Computer hardware troubleshooting</li>
+                                <li>Basic electronics and Logic gates</li>
+                                <li>Basic Network Topology</li>
+                            </ul>
+                        </div>
+            
+                        <!-- Software Field -->
+                        <div class="field-card">
+                            <h2>Software Skills</h2>
+                            <ul>
+                                <li>Python: Ultralytics, Opencv, Tensorflow, pandas</li>
+                                <li>Web Developement: HTML, CSS, JavaScript</li>
+                                <li>C++: Arduino</li>
+                            </ul>
+                        </div>
+            
+                        <!-- Other Fields -->
+                        <div class="field-card">
+                            <h2>Other skills</h2>
+                            <ul>
+                                <li>Machine learning: object detection, image classification and data labeling/annotation.</li>
+                                <li>Internet of things: Blynk and thingspeak</li>
+                                <li>Robotics</li>
+                                <li>Drafting: Autocad</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <button class="nav-button next-button" onclick="nextField()">Next &#9654;</button>
+                </div>
+            </section>
+            
+            
+
+            <section id="contact" class="content-section" style="display: none;">
+                <h1>Contact</h1>
+                <p>johnroedlabian@gmail.com</p>
+                <p>09368149368</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        let currentProjectIndex = 0;
+    const projects = document.querySelectorAll('.project-card');
+
+    function showProject(index) {
+        projects.forEach((project, i) => {
+            project.classList.toggle('active', i === index);
+        });
+    }
+        let currentFieldIndex = 0;
+    const fields = document.querySelectorAll('.field-card');
+
+    function showField(index) {
+        fields.forEach((field, i) => {
+            field.classList.toggle('active', i === index);
+        });
+    }
+    function nextProject() {
+        if (currentProjectIndex < projects.length - 1) {
+            currentProjectIndex++;
+        } else {
+            currentProjectIndex = 0; // Loop back to the first project if at the end
+        }
+        showProject(currentProjectIndex);
+    }
+
+    function prevProject() {
+        if (currentProjectIndex > 0) {
+            currentProjectIndex--;
+        } else {
+            currentProjectIndex = projects.length - 1; // Loop back to the last project if at the beginning
+        }
+        showProject(currentProjectIndex);
+    }
+
+    function nextField() {
+        if (currentFieldIndex < fields.length - 1) {
+            currentFieldIndex++;
+        } else {
+            currentFieldIndex = 0; // Loop back to the first field if at the end
+        }
+        showField(currentFieldIndex);
+    }
+
+    function prevField() {
+        if (currentFieldIndex > 0) {
+            currentFieldIndex--;
+        } else {
+            currentFieldIndex = fields.length - 1; // Loop back to the last field if at the beginning
+        }
+        showField(currentFieldIndex);
+    }
+    function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+    
+
+    // Initialize with the first field displayed
+    showField(currentFieldIndex);
+    
+        
+    </script>
+    
+</body>
+</html>

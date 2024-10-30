@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2d3e50;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    width: 120px; /* Adjust as needed for the image size */
+    height: 120px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image is cropped nicely */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.profile h2 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.nav-list {
+    list-style: none;
+    width: 100%;
+}
+
+.nav-list li {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #394a59;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.content-section {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.content-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* About Me Specific Styling */
+#about p {
+    text-align: left;
+}
+
+/* Additional Styles for Each Section */
+#projects, #skills, #contact {
+    padding: 20px;
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.project-card-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 80vw; /* Increase width for larger card */
+    max-width: 1200px; /* Set a maximum width for consistency */
+    justify-content: center;
+}
+
+.project-card {
+    width: 100%; /* Take full width of the wrapper */
+    background-color: #fafafa;
+    padding: 40px;
+    border-radius: 15px; /* Smooth corners */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    display: none; /* Hidden by default */
+}
+
+.project-card.active {
+    display: block; /* Display the active project */
+}
+
+.project-description, .project-tools {
+    margin-bottom: 20px;
+}
+
+.project-description p, .project-tools p {
+    font-family: 'Arial', sans-serif; /* Choose a font */
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.project-tools p {
+    font-family: 'Courier New', monospace; /* Choose a different font for tools */
+    font-size: 15px;
+    color: #666;
+}
+
+/* Image Container */
+.project-pic {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-pic img {
+    width: 100%; /* Scale image */
+    max-width: 600px; /* Set max width for images */
+    border-radius: 10px; /* Round corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Image shadow */
+}
+
+/* Navigation Buttons */
+.nav-button {
+    background-color: #2d3e50;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #394a59;
+}
+
+
+
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.field-card-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 80%; /* Set the width to 80% of the main container */
+    justify-content: center;
+}
+
+.field-card {
+    width: 100%; /* Take full width of the wrapper */
+    background-color: #fafafa;
+    padding: 30px; /* Increase padding for a bigger card appearance */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+}
+
+.field-card.active {
+    display: block; /* Display the active field */
+}
+
+.field-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.field-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.field-card li {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Navigation Button Styling (Same as previous) */
+.nav-button {
+    background-color: #2d3e50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #394a59;
+}
